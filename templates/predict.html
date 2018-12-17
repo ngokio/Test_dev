@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div>
+  <h1>Voici le salaire que je prédis pour {{ xp }} années d'expérience :</h1>
+  <p> {{ y_pred }} $ / an </p>
+</div>
+
+<div>
+  <a style="color:#1a1365" href="{{ url_for('project')}}">Retour</a>
+</div>
+
+{% endblock %}

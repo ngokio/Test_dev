@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="contact d-flex flex-column align-items-center" id="contact">
+ <h1 class="text-center mt-5 mb-2">Déposez votre projet</h1>
+ <h2 class="mb-5 sous-titre">Détaillez votre projet, nous vous attribuons l'étudiant le plus à même de répondre à votre besoin</h2>
+ <form class="d-flex flex-column align-items-center" action="{{url_for('project')}}" method="POST">
+     <div class="d-flex flex-row col-md-6 mr-5">
+       <label>Nom</label>
+       <input type="text" name="nom_utilisateur">
+     </div>
+     <div class="d-flex flex-row col-md-6 mr-5">
+       <label>Email</label>
+       <input type="email" name="email_utilisateur">
+     </div>
+     <div class="d-flex flex-row col-md-6 mr-5">
+       <label>Mon projet</label>
+       <textarea name="message_utilisateur"></textarea>
+     </div>
+ <div class="button d-flex justify-content-center">
+   <input type="hidden" name="_next" value="thanksEntreprise.html" />
+   <input type="submit" value="Envoyer">
+ </div>
+ </form>
+</div>
+
+{% endblock %}
